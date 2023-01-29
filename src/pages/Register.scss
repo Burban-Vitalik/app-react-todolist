@@ -1,0 +1,80 @@
+.registerPage {
+    background: rgb(211, 224, 223);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.register_form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 600px;
+    padding: 50px 30px;
+    background: white;
+
+    h2 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    hr {
+        border: 1px solid rgb(200, 197, 197);
+        width: 10%;
+        margin: 0 auto;
+    }
+}
+
+.register_form {
+    label {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        input {
+            padding: 5px 10px;
+            margin-top: 10px;
+            border: 1px solid rgb(237, 236, 236);
+            border-radius: 5px;
+            outline: 1px solid rgb(207, 204, 204);
+        }
+    }
+}
+
+.register_form {
+    .linkAuth {
+        font-size: 14px;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    
+    button {
+        cursor: pointer;
+        padding: 7px;
+        background: rgb(190, 230, 251);
+        border-radius: 5px;
+        border: 1px solid rgb(64, 80, 82);
+        max-width: 40%;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .register_form {
+        width: 500px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .register_form {
+        width: 350px;
+        padding: 20px;
+    }
+}
