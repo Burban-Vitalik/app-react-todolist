@@ -15,14 +15,12 @@ export function RegisterPage(){
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
-
 
     function onChangeFullName(e:any){
         setFullName(e.target.value);
     }
 
-    function onChangeEmail(e:any){
+    function onChangeEmail(e:any){        
         setEmail(e.target.value);
     }
 
@@ -37,11 +35,10 @@ export function RegisterPage(){
             email: email,
             password: password,
         }
-
-
-        users.push(newUser);
-        setArrNewUsers([...users]);
-
+        
+        arrNewUsers.map((el:any)=> el.email).includes(newUser.email)?
+        console.log('is'): users.push(newUser); setArrNewUsers([...users]);  
+            
         setFullName('')
         setEmail('')
         setPassword('')
@@ -57,8 +54,8 @@ export function RegisterPage(){
                 <h2>Register Account Form</h2>
                 <hr />
 
-                <label htmlFor="fullName">Full Name<input type="text" placeholder='Your Name' value={fullName} onChange={onChangeFullName}/></label>            
-                <label htmlFor="yourEmail">Your Email<input type='email'placeholder='Your Email' value={email} onChange={onChangeEmail}/></label>            
+                <label htmlFor="fullName">Full Name<input type="text" placeholder='Your Name' value={fullName} onChange={onChangeFullName}/></label>  
+                <label htmlFor="yourEmail">Your Email<input type='email' className='emailIntput' placeholder='Your Email' value={email} onChange={onChangeEmail}/></label>            
                 <label htmlFor="password">Password<input type="password" placeholder='Your Password'value={password} onChange={onChangePassword}/></label>
 
                 <p className='linkAuth'>Register / Login</p>
