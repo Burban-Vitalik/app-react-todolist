@@ -197,7 +197,7 @@ export default function TodoAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1,}}>
-      <AppBar position="static" style={{backgroundColor: myGreyColor }}>
+      <AppBar position="static" style={{backgroundColor: myGreyColor, position:'fixed' }}>
         <Toolbar>
           <Typography
             variant="h6"
